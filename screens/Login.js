@@ -41,7 +41,7 @@ const Login = ({ navigation }) => {
 
                 <LoginButton
                     activeOpacity={0.8}
-                    onPress={() => navigation.replace('HomePage')}
+                    onPress={() => navigation.push('HomePage')}
                 >
                     <LoginText>Login</LoginText>
                 </LoginButton>
