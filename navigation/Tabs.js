@@ -12,39 +12,53 @@ const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
     return (
-        < Tab.Navigator
-            initialRouteName="Home"
-            
-            screenOptions={({ route }) => ({
-                    tabBarIcon: ({ focused }) => {
-                        const icons = {
-                            Home: 'home',
-                            Search: 'search',
-                            Bookmark: 'bookmark',
-                            Settings: 'settings',
-                        };
-                        return (
-                            <Icon
-                                size={24}
-                                name={icons[route.name]}
-                                color={focused ? COLORS.darkLime : COLORS.gray}
-                            />
-                        );
-                    },
-                })
-            }
+
+        <Tab.Navigator
+
+            screenOptions={
+
+                ({ route }) => ({
+                header: ()=> null,
+                tabBarShowLabel: false,
+                tabBarStyle: {
+                    elevation: 5,
+                    backgroundColor: 'white',
+                },
+                tabBarIcon: ({ focused, color, size }) => {
+                    let iconName;
+
+                    if (route.name === 'Home') {
+                        iconName = focused
+                            ? 'home'
+                            : 'home-outline';
+                    } else if (route.name === 'Settings') {
+                        iconName = focused ? 'settings' : 'settings-outline';
+                    } else if (route.name === 'Search') {
+                        iconName = focused ? 'search' : 'search-outline';
+                    } else if (route.name === 'Bookmark') {
+                        iconName = focused ? 'bookmark' : 'bookmark-outline';
+                    }
+
+
+                    // You can return any component that you like here!
+                    return <Icon name={iconName} size={size} color={color} />;
+                },
+                tabBarActiveTintColor: COLORS.darkGreen,
+                tabBarInactiveTintColor: COLORS.lightGray2,
+            })}
         >
+
             <Tab.Screen name="Home"
-                component={Home} options={{ headerShown: false, showLabel: false }} />
+                component={Home} />
             <Tab.Screen
                 name="Search"
-                component={Search} options={{ headerShown: false }} />
+                component={Search} />
             <Tab.Screen
                 name="Bookmark"
-                component={Bookmark} options={{ headerShown: false }} />
+                component={Bookmark} />
             <Tab.Screen
                 name="Settings"
-                component={Settings} options={{ headerShown: false }} />
+                component={Settings} />
 
         </Tab.Navigator >
 
