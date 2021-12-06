@@ -8,6 +8,9 @@ import Tabs from './navigation/Tabs';
 import Login from './screens/Login';
 import Recipe from './screens/Recipe';
 import { theme } from './constants/theme';
+import Search from './screens/tabs/Search';
+import Bookmark from './screens/tabs/Bookmark';
+import Settings from './screens/tabs/Settings';
 
 const Stack = createStackNavigator();
 
@@ -20,8 +23,13 @@ const App = () => {
           screenOptions={{ headerShown: false }}
           initialRouteName={'Login'}>
           <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Home" component={Tabs} />
+          <Stack.Screen name="HomePage" component={Tabs} />
           <Stack.Screen name="Recipe" component={Recipe} />
+          
+
+
+
+
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
