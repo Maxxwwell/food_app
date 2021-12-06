@@ -56,10 +56,22 @@ export const LoginButton = styled(TouchableOpacity)`
     padding-horizontal: 40%
 `;
 
+export const SignupButton = styled(TouchableOpacity)`
+    height: 90%;
+    width: 100%
+    border-color: ${({theme}) => theme.COLORS.darkLime};
+    align-items: center;
+    justify-content: center;
+    elevation: 10;
+    border-radius:15px;
+    padding-horizontal: 40%
+    border-width: 1px
+`;
+
 export const ButtonContainer = styled(View)`
     height:10%;
     width: 100%;
-    bottom: 15%;
+    bottom: 5%;
     position: absolute;
     align-items: center;
     padding-horizontal: 20px
@@ -67,13 +79,14 @@ export const ButtonContainer = styled(View)`
 
 `;
 
-
 export const LoginText = styled(Text)`
     width: 90%;
     color: ${({ theme }) => theme.COLORS.white}
-    font-size: ${({ theme }) => theme.SIZES.body2}px
+    font-size: ${({ theme }) => theme.SIZES.body3}px
     font-weight: 700;
-    justify-content: center;
+    justify-content: center;    
+`;
 
-    
+export const VerticalSpace = styled(View)`
+    height: ${({ theme }) => theme.SIZES.font}px
 `;

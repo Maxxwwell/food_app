@@ -1,9 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { StatusBar, Text, TouchableOpacity } from 'react-native';
+import { StatusBar, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { CustomButton } from '../components';
-import { BackgroundImage, ButtonContainer, ButtonText, Details, GradientContainer, GradientPosition, LoginButton, LoginText, Scaffold, Title, TitleContainer } from '../components/login.styled.components/styled';
+import { BackgroundImage, ButtonContainer, Details, GradientContainer, GradientPosition, LoginButton, LoginText, Scaffold, SignupButton, Title, TitleContainer, VerticalSpace } from '../components/login.styled.components/styled';
 import { images } from '../constants';
 import { COLORS } from '../constants/theme/COLORS';
 import { SIZES } from '../constants/theme/SIZES';
@@ -14,19 +13,11 @@ const Login = ({ navigation }) => {
             <StatusBar translucent
                 backgroundColor="rgba(0,0,0,0)" />
 
-            {/* <TouchableOpacity onPress={() => navigation.replace('Home')}>
-            <Text>I am ur login</Text>
-        </TouchableOpacity>  */}
-
-
             <BackgroundImage
-
                 source={images.loginBackground}
                 resizeMode="cover" />
             <TitleContainer>
-
                 <Title>Cooking Delicious Food Easily</Title>
-
             </TitleContainer>
 
             <GradientContainer>
@@ -42,18 +33,24 @@ const Login = ({ navigation }) => {
                         height: 35,
                         paddingHorizntal: SIZES.base,
                     }}
-
                 />
                 <Details>Discover more than 1200 food recipes in your hands and cooking it easily</Details>
             </GradientContainer>
 
             <ButtonContainer>
-                <LoginButton>
+
+                <LoginButton
+                    activeOpacity={0.8}
+                    onPress={() => navigation.replace('Home')}
+                >
                     <LoginText>Login</LoginText>
                 </LoginButton>
+                <VerticalSpace />
+                <SignupButton activeOpacity={0.8}>
+                    <LoginText>Sign up</LoginText>
+                </SignupButton>
+
             </ButtonContainer>
-
-
 
         </Scaffold>
 
