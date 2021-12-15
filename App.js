@@ -8,9 +8,6 @@ import Tabs from './navigation/Tabs';
 import Login from './screens/Login';
 import Recipe from './screens/Recipe';
 import { theme } from './constants/theme';
-import Search from './screens/tabs/Search';
-import Bookmark from './screens/tabs/Bookmark';
-import Settings from './screens/tabs/Settings';
 
 const Stack = createStackNavigator();
 

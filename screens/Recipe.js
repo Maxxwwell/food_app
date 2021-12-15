@@ -1,11 +1,18 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 
 const Recipe = () => {
+    
+
+
     return (
-        <Text>I am ur recipe</Text>
+        <View>
+          <Text>categoryItem.name</Text>
+          
+        </View>
+
     );
 };
 

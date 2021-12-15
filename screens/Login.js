@@ -45,7 +45,9 @@ const Login = ({ navigation }) => {
                 >
                     <LoginText>Login</LoginText>
                 </LoginButton>
+
                 <VerticalSpace />
+
                 <SignupButton activeOpacity={0.8}>
                     <LoginText>Sign up</LoginText>
                 </SignupButton>

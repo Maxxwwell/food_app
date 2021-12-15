@@ -76,7 +76,6 @@ export const ButtonContainer = styled(View)`
     align-items: center;
     padding-horizontal: 20px
     justify-content: center;
-
 `;
 
 export const LoginText = styled(Text)`
