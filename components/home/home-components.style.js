@@ -59,12 +59,12 @@ export const HeaderItems = styled(View)`
 export const GreetnsText = styled(Text)`
     color: ${({ theme }) => theme.COLORS.darkGreen};
     font-size: ${({ theme }) => theme.SIZES.h2}px
-
     font-weight: 700;
 `;
 
 export const IntroText = styled(Text)`   
     font-weight: 600;
+    width: 80%
 `;
 
 export const ProfilePic = styled(Image)`
@@ -78,6 +78,7 @@ export const ProfilePic = styled(Image)`
 export const Search = styled(View)`
     flex-direction: row;
     align-items: center;
+    margin-vertical: 10px;
     margin-horizontal: ${({ theme }) => theme.SIZES.padding}px;
     padding-horizontal: ${({ theme }) => theme.SIZES.radius}px;
     border-radius: 10px;
@@ -95,4 +96,40 @@ export const TextField = styled(TextInput)`
     flex: 1;
     margin-left: ${({ theme }) => theme.SIZES.radius}px;
     font-size: ${({ theme }) => theme.SIZES.body3}px
+`;
+
+
+//<__________________________RECIPE CARD_______________________________>
+export const RecipeCard = styled(View)`
+    flex-direction: row;
+    margin-top: ${({ theme }) => theme.SIZES.base}px;
+    margin-horizontal: ${({ theme }) => theme.SIZES.radius}px;
+    border-radius: 10px;
+    background-color: ${({ theme }) => theme.COLORS.lightGreen}
+`;
+
+export const RecipeItems = styled(View)`
+    width: 20%;
+    align-items: center;
+    justfify-content: center;
+`;
+
+export const RecipeImage = styled(Image)`
+    width: 80px;
+    height: 80px;
+`;
+
+export const TextContainer = styled(View)`
+    padding-horizontal: 10%;
+    margin-vertical: 1%
+`;
+
+export const SmallSpace = styled(View)`
+    height: 5%
+`;
+
+export const RecipeText = styled(Text)`   
+    font-weight: 600;
+    color: ${({ theme }) => theme.COLORS.darkGreen};
+    text-decoration-line: underline;
 `;

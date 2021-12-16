@@ -4,6 +4,7 @@ import { FlatList, StatusBar, View } from 'react-native';
 import Category_card from '../components/Category_card';
 import Header from '../components/home/Header';
 import { Scaffold } from '../components/home/home-components.style';
+import Recipe_Card from '../components/home/Recipe_Card';
 import SearchBar from '../components/home/SearchBar';
 import { dummyData } from '../constants';
 import { COLORS } from '../constants/theme/COLORS';
@@ -25,6 +26,7 @@ const Home = ({ navigation }) => {
                     <View>
                         <Header />
                         <SearchBar />
+                        <Recipe_Card />
                     </View>
 
 
